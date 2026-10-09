@@ -53,6 +53,8 @@ In all the experiments the calibration set is the **first** `N_c = floor(c N)` w
 
 ### Figures
 * [meta_learning_workflow.pdf](plots/battery_workflow.pdf): Workflow figure (meta-training and deployment on an unseen battery).
+<!-- ![machine-translation-like model-free simulation](fig/plots/battery_workflow.pdf "Generalized multi-step-ahead simulation") -->
+<img src="plots/battery_workflow.pdf"  width="1400">
 
 ## How to run
 
