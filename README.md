@@ -45,7 +45,7 @@ Download them from the *Releases* page and unzip them in the root of the reposit
   * `data_efficiency_sim2real_true_<cell>.pdf`: same for the real cells;
   * `<cell>_trajectory_true_capacity_by_calibfrac.pdf`: SOC trajectories on the real cells for different calibration fractions;
   * `simulated_test_summary_true.csv`, `sim2real_summary_true_<cell>.csv`: tables with the numbers.
-* [soc0_robustness_ablation.py](soc0_robustness_ablation.py): robustness of the Kalman filter to a wrong initial SOC (true / 0.5 / 0.0) and to the initial covariance, with the recovery trajectories.
+* [soc0_robustness_ablation.py](soc0_robustness_ablation.py): robustness of the Kalman filter to a wrong initial SOC (true / 0.0) and to the initial covariance, with the recovery trajectories.
 
 ### Calibration protocol
 In all the experiments the calibration set is the **first** `N_c = floor(c N)` windows of the test run (the same for all methods and seeds), and the error is computed only on the windows after the calibration segment. The seeds change only the checkpoint (or the initialization of the Baseline).
