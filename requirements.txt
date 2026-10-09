@@ -1,0 +1,12 @@
+# Core numerical / ML stack
+torch>=2.0          # torch.func.functional_call (used by CoDA models) needs >= 2.0
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3   # StandardScaler, mean_squared_error, mean_absolute_error
+
+# Plotting
+matplotlib>=3.7
+
+# Notebook (soc_metalearning_battery.ipynb)
+jupyter>=1.0
+ipykernel>=6.0
