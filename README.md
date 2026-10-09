@@ -48,7 +48,7 @@ Download them from the *Releases* page and unzip them in the root of the reposit
 * [soc0_robustness_ablation.py](soc0_robustness_ablation.py): robustness of the Kalman filter to a wrong initial SOC (true / 0.5 / 0.0) and to the initial covariance, with the recovery trajectories.
 
 ### Calibration protocol
-In all the experiments the calibration set is the **first** `N_c = max(16, floor(c N))` windows of the test run (the same for all methods and seeds), and the error is computed only on the windows after the calibration segment. The seeds change only the checkpoint (or the initialization of the Baseline).
+In all the experiments the calibration set is the **first** `N_c = floor(c N)` windows of the test run (the same for all methods and seeds), and the error is computed only on the windows after the calibration segment. The seeds change only the checkpoint (or the initialization of the Baseline).
 
 ### Additional python files
 * [check_coherence.py](check_coherence.py): checks that the shared definitions (constants, windowing, battery split) are identical in two scripts.
