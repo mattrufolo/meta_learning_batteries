@@ -40,7 +40,7 @@ Download them from the *Releases* page and unzip them in the root of the reposit
 * [soc_metalearning_training.ipynb](soc_metalearning_training.ipynb): meta-training of CAMEL, CoDA, MAML-Windowed and of the supervised Baseline on the simulated cells, with the battery-level train/validation/test split. It saves the best checkpoint of each method in `checkpoints/seed_<k>/`.
 
 ### Evaluation and plots
-* [plot_sim_to_real_2.py](plot_sim_to_real_2.py): evaluation-only script, it loads the checkpoints and reproduces the data-efficiency results (simulated test batteries and sim-to-real on A123 and INR21700-50E), averaged over the 5 seeds. It produces:
+* [plot_sim_to_real.py](plot_sim_to_real.py): evaluation-only script, it loads the checkpoints and reproduces the data-efficiency results (simulated test batteries and sim-to-real on A123 and INR21700-50E), averaged over the 5 seeds. It produces:
   * `data_efficiency_final.png/.pdf`: RMSE versus calibration fraction on the simulated test batteries;
   * `data_efficiency_sim2real_true_<cell>.pdf`: same for the real cells;
   * `<cell>_trajectory_true_capacity_by_calibfrac.pdf`: SOC trajectories on the real cells for different calibration fractions;
@@ -50,11 +50,9 @@ Download them from the *Releases* page and unzip them in the root of the reposit
 ### Calibration protocol
 In all the experiments the calibration set is the **first** `N_c = floor(c N)` windows of the test run (the same for all methods and seeds), and the error is computed only on the windows after the calibration segment. The seeds change only the checkpoint (or the initialization of the Baseline).
 
-### Additional python files
-* [check_coherence.py](check_coherence.py): checks that the shared definitions (constants, windowing, battery split) are identical in two scripts.
 
 ### Figures
-* [meta_learning_workflow.tex](meta_learning_workflow.tex): TikZ source of the workflow figure (meta-training and deployment on an unseen battery).
+* [meta_learning_workflow.pdf](plots/battery_workflow.pdf): Workflow figure (meta-training and deployment on an unseen battery).
 
 ## How to run
 
