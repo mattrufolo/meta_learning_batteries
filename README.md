@@ -1,6 +1,6 @@
 # Structured Meta-Learning for Battery State-of-Charge Estimation
 
-This repository contains the Python code to reproduce the results of the paper *Structured Meta-Learning for Battery State-of-Charge Estimation: Data Efficiency and Sim-to-Real Transfer* by M. Rufolo, D. Piga, et al.
+This repository contains the Python code to reproduce the results of the paper *Structured Meta-Learning for Battery State-of-Charge Estimation: Data Efficiency and Sim-to-Real Transfer* by M. Rufolo, et al.
 
 The paper studies how to estimate the state of charge (SOC) of a lithium-ion cell from current and voltage measurements, when only a few labelled data of the target cell are available. The estimator is split into a part that is **shared** across all batteries and operating conditions and a small **task-specific** part that is adapted to the new cell from a short calibration segment. Training uses **simulated cells only**; testing is done on unseen simulated batteries and on two **real** cells (A123 LFP, out-of-distribution chemistry, and Samsung INR21700-50E NCA), without any retraining. The compared methods are:
 
@@ -80,7 +80,7 @@ While all the scripts can run on CPU, the training may be slow. For faster train
 If you find this project useful, we encourage you to:
 
 * Star this repository :star:
-* Cite the [paper](https://github.com/mattrufolo) (link to be updated)
+<!-- * Cite the [paper](https://github.com/mattrufolo) (link to be updated)
 
 ```
 @article{rufolo2026structured,
@@ -90,7 +90,7 @@ If you find this project useful, we encourage you to:
   year    = {2026},
   note    = {under review}
 }
-```
+``` -->
 
 # License
 This project is released under the MIT license, see [LICENSE](LICENSE).
