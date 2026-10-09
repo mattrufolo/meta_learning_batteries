@@ -2,7 +2,13 @@
 
 This repository contains the Python code to reproduce the results of the paper *Structured Meta-Learning for Battery State-of-Charge Estimation: Data Efficiency and Sim-to-Real Transfer* by M. Rufolo, et al.
 
-The paper studies how to estimate the state of charge (SOC) of a lithium-ion cell from current and voltage measurements, when only a few labelled data of the target cell are available. The estimator is split into a part that is **shared** across all batteries and operating conditions and a small **task-specific** part that is adapted to the new cell from a short calibration segment. Training uses **simulated cells only**; testing is done on unseen simulated batteries and on two **real** cells (A123 LFP, out-of-distribution chemistry, and Samsung INR21700-50E NCA), without any retraining. The compared methods are:
+The paper studies how to estimate the state of charge (SOC) of a lithium-ion cell from current and voltage measurements, when only a few labelled data of the target cell are available. The estimator is split into a part that is **shared** across all batteries and operating conditions and a small **task-specific** part that is adapted to the new cell from a short calibration segment. Training uses **simulated cells only**; testing is done on unseen simulated batteries and on two **real** cells (A123 LFP, out-of-distribution chemistry, and Samsung INR21700-50E NCA), without any retraining. 
+
+Workflow figure (meta-training and deployment on an unseen battery).
+<!-- ![machine-translation-like model-free simulation](fig/plots/battery_workflow.png "Generalized multi-step-ahead simulation") -->
+<img src="plots/battery_workflow.png"  width="1400">
+
+The compared methods are:
 
 * **CAMEL**: shared nonlinear features with a linear task-specific head, adapted in closed form (ridge regression);
 * **CoDA**: low-dimensional task-specific parameters that modulate the shared network, adapted by gradient-based optimization;
@@ -52,9 +58,7 @@ In all the experiments the calibration set is the **first** `N_c = floor(c N)` w
 
 
 ### Figures
-* [meta_learning_workflow.pdf](plots/battery_workflow.pdf): Workflow figure (meta-training and deployment on an unseen battery).
-<!-- ![machine-translation-like model-free simulation](fig/plots/battery_workflow.pdf "Generalized multi-step-ahead simulation") -->
-<img src="plots/battery_workflow.pdf"  width="1400">
+* [meta_learning_workflow.pdf](plots/battery_workflow.png): 
 
 ## How to run
 
