@@ -5,8 +5,8 @@ This repository contains the Python code to reproduce the results of the paper *
 The paper studies how to estimate the state of charge (SOC) of a lithium-ion cell from current and voltage measurements, when only a few labelled data of the target cell are available. The estimator is split into a part that is **shared** across all batteries and operating conditions and a small **task-specific** part that is adapted to the new cell from a short calibration segment. Training uses **simulated cells only**; testing is done on unseen simulated batteries and on two **real** cells (A123 LFP, out-of-distribution chemistry, and Samsung INR21700-50E NCA), without any retraining. 
 
 Workflow figure (meta-training and deployment on an unseen battery).
-<!-- ![machine-translation-like model-free simulation](fig/plots/battery_workflow.png "Generalized multi-step-ahead simulation") -->
-<img src="plots/battery_workflow.png"  width="1400">
+<!-- ![machine-translation-like model-free simulation](fig/plots/battery_workflow.pdf "Generalized multi-step-ahead simulation") -->
+<img src="plots/battery_workflow.pdf"  width="1400">
 
 The compared methods are:
 
